@@ -61,7 +61,7 @@ const Dashboard = () => {
         </header>
         <hr id="hrdash" />
 
-        {/* Stats Section */}
+        
         <div className="stats-container">
           <NavLink to="/Members" style={{ textDecoration: 'none' }} className="stat-card">
             <div className="stat-content">
