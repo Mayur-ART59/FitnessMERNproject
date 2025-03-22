@@ -22,7 +22,7 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://fitness-wxxo.onrender.com/', form)
+    axios.post('https://fitness-wxxo.onrender.com/Signup', form)
       .then((res) => {
         console.log(res.data);
         toast.success("Signed Up Successfully!", {
