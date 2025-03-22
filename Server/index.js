@@ -29,7 +29,7 @@ app.get('/ping',(req,res)=>{
   res.status(200).send('Server is up')
 })
 // SignUP
-app.post('/', async (req, res) => {
+app.post('/Signup', async (req, res) => {
   try {
     const { name, email, password, gymname } = req.body;
 
