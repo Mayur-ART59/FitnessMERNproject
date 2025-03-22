@@ -25,7 +25,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
-
+app.get('/ping',(req,res)=>{
+  res.status(200).send('Server is up')
+})
 // SignUP
 app.post('/', async (req, res) => {
   try {
