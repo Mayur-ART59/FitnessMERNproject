@@ -13,7 +13,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const ownerId = localStorage.getItem("ownerId");
-    axios.get(`http://localhost:5000/revenue?ownerId=${ownerId}`)
+    axios.get(`https://fitness-wxxo.onrender.com/revenue?ownerId=${ownerId}`)
       .then((res) => {
         setTotalRevenue(res.data.totalRevenue);
       })
@@ -23,7 +23,7 @@ const Dashboard = () => {
 
     // Fetch Total Members
     
-    axios.get(`http://localhost:5000/Members?ownerId=${ownerId}`)
+    axios.get(`https://fitness-wxxo.onrender.com/Members?ownerId=${ownerId}`)
       .then((res) => {
         setMembers(res.data);
       })
@@ -33,7 +33,7 @@ const Dashboard = () => {
   
       // Fetch Upcoming Renewals
       axios
-      .get(`http://localhost:5000/UpcomingRenewals?ownerId=${ownerId}`)
+      .get(`https://fitness-wxxo.onrender.com/UpcomingRenewals?ownerId=${ownerId}`)
       .then((res) => {
         setData(res.data);
       })
@@ -60,8 +60,6 @@ const Dashboard = () => {
           <NavLink to='/Login' id="logout" onClick={handleLogout}><span><LogoutIcon /> Logout</span></NavLink>
         </header>
         <hr id="hrdash" />
-
-        
         <div className="stats-container">
           <NavLink to="/Members" style={{ textDecoration: 'none' }} className="stat-card">
             <div className="stat-content">

@@ -34,7 +34,7 @@ function AddPlanModal({ show, handleClose, handleAdd }) {
     setError("");
 
     // Send request to backend to create new plan
-    axios.post("http://localhost:5000/addplans", {
+    axios.post("https://fitness-wxxo.onrender.com/addplans", {
       ...newPlan, 
       ownerId,   
   })

@@ -16,7 +16,7 @@ const Members = () => {
       return;
     }
     axios
-      .get(`http://localhost:5000/Members?ownerId=${ownerId}`)
+      .get(`https://fitness-wxxo.onrender.com/Members?ownerId=${ownerId}`)
       .then((res) => {
         setData(res.data);
       })
@@ -31,7 +31,7 @@ const Members = () => {
 
   const handleDelete = (_id) => {
     axios
-      .delete(`http://localhost:5000/DeleteMembers/${_id}`)
+      .delete(`https://fitness-wxxo.onrender.com/DeleteMembers/${_id}`)
       .then((res) => {
         setData(data.filter((item) => item._id !== _id));
         toast.success("Member Deleted Successfully!");

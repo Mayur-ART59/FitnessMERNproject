@@ -18,7 +18,7 @@ function AddMember() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:5000/plans")
+    axios.get("https://fitness-wxxo.onrender.com/plans")
       .then((res) => setPlans(res.data))
       .catch((err) => console.error("Error fetching plans:", err));
   }, []);
@@ -51,7 +51,7 @@ function AddMember() {
       return;
     }
     axios
-      .post("http://localhost:5000/Addmember", {
+      .post("https://fitness-wxxo.onrender.com/Addmember", {
         name: member.name,
         planId: member.planId,
         joinDate: member.joinDate,
