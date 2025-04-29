@@ -9,7 +9,7 @@ function Revenue() {
 
   useEffect(() => {
     const ownerId = localStorage.getItem("ownerId");
-    axios.get(`https://fitness-wxxo.onrender.com/revenuedetails?ownerId=${ownerId}`)
+    axios.get(`https://gymdesk.onrender.com/revenuedetails?ownerId=${ownerId}`)
       .then(res => setRevenueData(res.data))
       .catch(err => console.error("Error fetching revenue details:", err));
   }, []);

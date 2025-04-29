@@ -19,7 +19,7 @@ function MembershipPlans() {
 
   const fetchPlans = async () => {
     try {
-      const response = await axios.get('https://fitness-wxxo.onrender.com/plans');
+      const response = await axios.get('https://gymdesk.onrender.com/plans');
       setPlans(response.data);
     } catch (error) {
       console.error('Error fetching plans:', error);
@@ -38,7 +38,7 @@ function MembershipPlans() {
 
   const handleUpdate = async (updatedPlan) => {
     try {
-      await axios.patch(`https://fitness-wxxo.onrender.com/plans/${editingPlan._id}`, updatedPlan);
+      await axios.patch(`https://gymdesk.onrender.com/plans/${editingPlan._id}`, updatedPlan);
       setPlans(plans.map((plan) => (plan._id === editingPlan._id ? updatedPlan : plan)));
       setEditingPlan(null);
       toast.success('Plan updated successfully');
@@ -53,7 +53,7 @@ function MembershipPlans() {
       toast.error("Unauthorized: Please login first");
       return;
     }
-    axios.delete(`https://fitness-wxxo.onrender.com/delete/plans/${_id}`, {
+    axios.delete(`https://gymdesk.onrender.com/delete/plans/${_id}`, {
       data: { ownerId } })
       .then((res) => {
         setPlans(plans.filter((plan) => plan._id !== _id));

@@ -22,7 +22,7 @@ function Editmember() {
 
   useEffect(() => {
     if (id) {
-      axios.get(`https://fitness-wxxo.onrender.com/Member/${id}`)
+      axios.get(`https://gymdesk.onrender.com/Member/${id}`)
         .then((res) => {
           const fetchedMember = res.data;
           setEmember({
@@ -36,7 +36,7 @@ function Editmember() {
   }, [id]);
    
   useEffect(() => {
-    axios.get("https://fitness-wxxo.onrender.com/plans")
+    axios.get("https://gymdesk.onrender.com/plans")
       .then((res) => setPlans(res.data))
       .catch((err) => console.error("Error fetching plans:", err));
   }, []);
@@ -72,7 +72,7 @@ function Editmember() {
   const handleUpdate = (e) => {
     e.preventDefault();
     const ownerId = localStorage.getItem("ownerId");
-    axios.patch(`https://fitness-wxxo.onrender.com/Updatemember/${id}`, {
+    axios.patch(`https://gymdesk.onrender.com/Updatemember/${id}`, {
       name: emember.name,
       email: emember.email,
       phone: emember.phone,

@@ -22,7 +22,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://fitness-wxxo.onrender.com/SignIn', form)
+    axios.post('https://gymdesk.onrender.com/SignIn', form)
       .then((res) => {
         console.log(res.data);
         const { username,ownerId,gymname } = res.data;
