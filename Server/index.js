@@ -20,7 +20,10 @@ const Revenue = require('./Revenuemodel');
 const Plan = require('./Membershipmodel');
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://gymdesk.netlify.app"
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
