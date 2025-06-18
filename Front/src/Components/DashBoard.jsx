@@ -5,6 +5,7 @@ import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import LogoutIcon from '@mui/icons-material/Logout';
 import { toast } from "react-toastify";
+//use comments for better understanding
 
 const Dashboard = () => {
   const [members, setMembers] = useState([]);
